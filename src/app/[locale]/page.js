@@ -1,7 +1,7 @@
 import { Hero } from '@/features/present-agency';
 import { About } from '@/features/present-agency';
 import { Portfolio } from '@/features/show-portfolio';
-// import { ServiceCatalog } from "@/features/service-catalog";
+import { ServiceCatalog } from '@/features/service-catalog';
 
 const Page = async () => {
   return (
@@ -9,7 +9,7 @@ const Page = async () => {
       <Hero />
       <About />
       <Portfolio />
-      {/* <ServiceCatalog /> */}
+      <ServiceCatalog />
     </div>
   );
 };
