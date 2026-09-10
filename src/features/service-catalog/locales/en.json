@@ -19,7 +19,6 @@
       "subtitle": "Ideal for entrepreneurs getting started",
       "price": "$120",
       "badge": null,
-      "color": "from-emerald-500 to-teal-600",
       "popular": false,
       "pitch": "Your business online in under two weeks.",
       "features": [
@@ -38,7 +37,6 @@
       "subtitle": "For businesses that want to sell more",
       "price": "$280",
       "badge": "Most popular",
-      "color": "from-blue-500 to-indigo-600",
       "popular": true,
       "pitch": "A complete system to manage and grow your business.",
       "features": [
@@ -57,7 +55,6 @@
       "subtitle": "For companies with specific requirements",
       "price": "GET A QUOTE",
       "badge": null,
-      "color": "from-violet-500 to-purple-700",
       "popular": false,
       "pitch": "We build exactly what your company needs.",
       "features": [
