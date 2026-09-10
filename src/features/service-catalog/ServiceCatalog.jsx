@@ -21,12 +21,12 @@ export const ServiceCatalog = () => {
           </div>
 
           <h2 className="text-patagonia-title font-bold mb-6">
-            <span className="bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparentl">
-              {t('Insights.title1')}
+            <span className="bg-gradient-to-r from-white via-patagonia-muted to-patagonia-teal bg-clip-text text-transparent">
+              {t('Insights.titleLine1')}
             </span>
             <br />
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              {t('Insights.title2')}
+            <span className="bg-gradient-to-r from-patagonia-teal to-patagonia-petrol bg-clip-text text-transparent">
+              {t('Insights.titleLine2')}
             </span>
           </h2>
 

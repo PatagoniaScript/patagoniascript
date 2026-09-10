@@ -1,8 +1,8 @@
 {
   "Insights": {
     "label": "Nuestros planes",
-    "title1": "Elegí el plan",
-    "title2": "que impulsa tu negocio",
+    "titleLine1": "Elegí el plan",
+    "titleLine2": "que impulsa tu negocio",
     "intro": "Cada plan está pensado para una etapa distinta de tu negocio.",
     "introBold": "Elegí el que se ajusta a vos.",
     "prevCard": "Plan anterior",

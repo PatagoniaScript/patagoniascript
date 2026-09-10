@@ -19,12 +19,12 @@ export const Portfolio = () => {
 
         <h2 className="text-patagonia-title font-bold mb-6">
           <span className="bg-gradient-to-r from-white via-patagonia-muted to-patagonia-teal bg-clip-text text-transparent">
-            {t('title')}
+            {t('titleLine1')}
           </span>
         </h2>
 
         <p className="text-patagonia-description text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          {t.rich('description', {
+          {t.rich('titleLine2', {
             highlight: (chunks) => (
               <span className="text-patagonia-teal font-semibold">
                 {chunks}

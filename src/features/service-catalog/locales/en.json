@@ -1,8 +1,8 @@
 {
   "Insights": {
     "label": "Our plans",
-    "title1": "Choose the plan",
-    "title2": "that grows your business",
+    "titleLine1": "Choose the plan",
+    "titleLine2": "that grows your business",
     "intro": "Each plan is built for a different stage of your business.",
     "introBold": "Pick the one that fits you.",
     "prevCard": "Previous plan",

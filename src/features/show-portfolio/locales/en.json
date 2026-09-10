@@ -1,7 +1,7 @@
 {
   "label": "Our Work",
-  "title": "Explore Our Work",
-  "description": "Every project is a unique story. See how we turn ideas into <highlight>extraordinary digital experiences</highlight> that connect with audiences and drive outcomes.",
+  "titleLine1": "Explore Our Work",
+  "titleLine2": "Every project is a unique story. See how we turn ideas into <highlight>extraordinary digital experiences</highlight> that connect with audiences and drive outcomes.",
   "cta": "View Project",
   "projects": [
     {
