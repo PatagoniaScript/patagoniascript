@@ -6,7 +6,7 @@
   "projects": [
     {
       "id": "0",
-      "imgUrl": "/temp/haize.png",
+      "imgUrl": "urtxkm9dwstokbbyfyjq",
       "title": "Haize — Men's Fashion Store",
       "description": "Men's clothing e-commerce platform featuring variant management, user authentication, and a production-ready payment gateway.",
       "tags": [
@@ -22,7 +22,7 @@
     },
     {
       "id": "1",
-      "imgUrl": "/temp/prestamosapp.png",
+      "imgUrl": "caghgoqsefybhmdejqrg",
       "title": "PréstamosApp",
       "description": "Full-stack platform for managing loans, clients, and calculating financial statistics (IRR and Default Rates).",
       "tags": ["Next.js", "Tailwind", "Finance", "Supabase", "Full-Stack"],
@@ -30,15 +30,15 @@
     },
     {
       "id": "2",
-      "imgUrl": "/temp/indumentariasoffy.png",
+      "imgUrl": "so7kgehlscw8crdovuz8",
       "title": "IndumentariaSoffy",
       "description": "Women's fashion online store with a complete shopping flow, payment gateway, and inventory management.",
       "tags": ["E-commerce", "React", "Style", "Mercado Pago API", "Inventory"],
-      "url": "https://indumentariasoffy.vercel.app/"
+      "url": "https://ecommercesoffy.vercel.app/"
     },
     {
       "id": "3",
-      "imgUrl": "/temp/solcampestre.png",
+      "imgUrl": "gxgkgksbt97riwwx5glo",
       "title": "Sol Campestre",
       "description": "B2C e-commerce focused on rural products featuring stock management, order synchronization, and integrated live payments.",
       "tags": [

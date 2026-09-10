@@ -6,7 +6,7 @@
   "projects": [
     {
       "id": "0",
-      "imgUrl": "/haize.png",
+      "imgUrl": "urtxkm9dwstokbbyfyjq",
       "title": "Haize — Men's Fashion Store",
       "description": "E-commerce de indumentaria masculina con gestión de variantes, autenticación de usuarios y pasarela de pago en producción.",
       "tags": [
@@ -22,7 +22,7 @@
     },
     {
       "id": "1",
-      "imgUrl": "/prestamosapp.png",
+      "imgUrl": "caghgoqsefybhmdejqrg",
       "title": "PréstamosApp",
       "description": "Plataforma Full-Stack para gestión de préstamos, clientes y cálculo de estadísticas financieras (TIR y Mora).",
       "tags": ["Next.js", "Tailwind", "Finanzas", "Supabase", "Full-Stack"],
@@ -30,7 +30,7 @@
     },
     {
       "id": "2",
-      "imgUrl": "/indumentariasoffy.png",
+      "imgUrl": "so7kgehlscw8crdovuz8",
       "title": "IndumentariaSoffy",
       "description": "Tienda online de moda femenina con flujo de compra completo, pasarela de pago y gestión de inventario.",
       "tags": [
@@ -44,7 +44,7 @@
     },
     {
       "id": "3",
-      "imgUrl": "/solcampestre.png",
+      "imgUrl": "gxgkgksbt97riwwx5glo",
       "title": "Sol Campestre",
       "description": "E-commerce B2C con gestión de stock, sincronización de pedidos y pago real integrado, orientado a productos rurales.",
       "tags": [

@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { CldImage } from 'next-cloudinary';
 
 export const ProjectCard = ({
   project,
@@ -36,11 +36,17 @@ export const ProjectCard = ({
       "
       >
         <div className="w-full h-40 relative rounded-md overflow-hidden mb-4">
-          <Image
+          <CldImage
             src={project.imgUrl}
             alt={project.title}
             fill
+            sizes="(max-width: 768px) 90vw, 380px"
             className="object-cover"
+            crop="fill"
+            gravity="auto"
+            quality="auto"
+            format="auto"
+            priority={isActive}
           />
         </div>
 
