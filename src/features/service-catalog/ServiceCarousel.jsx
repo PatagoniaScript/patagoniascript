@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { ServiceCard } from './ServiceCard';
 
 const MIN_SWIPE_DISTANCE = 50;
@@ -12,8 +13,6 @@ export const ServiceCarousel = ({
   nextCardLabel,
   arsLabel,
   viewPlanLabel,
-  swipeHintLabel,
-  keyboardHintLabel,
   goToPlanLabel,
 }) => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -91,60 +90,28 @@ export const ServiceCarousel = ({
   };
 
   return (
-    <>
+    <div className="max-w-7xl pb-4 mx-auto relative z-10">
       <div
-        className="relative w-full max-w-6xl mx-auto mb-12 select-none"
-        style={{ perspective: '1200px', height: '620px' }}
+        className="relative w-full max-w-6xl mx-auto select-none flex justify-center content-center"
+        style={{ perspective: '1200px', height: '500px' }}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
         <button
           onClick={goToPrevious}
-          className="absolute -left-16 top-1/2 transform -translate-y-1/2 z-30
-                     bg-patagonia-petrol/60 hover:bg-patagonia-petrol/90 backdrop-blur-sm
-                     text-white p-2 rounded-full shadow-lg
-                     transition-all duration-300 hover:scale-110 opacity-70 hover:opacity-100
-                     hidden xl:flex items-center justify-center"
           aria-label={prevCardLabel}
+          className="absolute left-28 top-1/2 transform -translate-y-1/2 z-30 text-patagonia-muted hover:text-patagonia-teal p-2 rounded-full shadow-lg hidden xl:flex transition-all duration-300 hover:scale-110 hover:-translate-x-4"
         >
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
+          <IoIosArrowBack size={32} />
         </button>
 
         <button
           onClick={goToNext}
-          className="absolute -right-16 top-1/2 transform -translate-y-1/2 z-30
-                     bg-patagonia-petrol/60 hover:bg-patagonia-petrol/90 backdrop-blur-sm
-                     text-white p-2 rounded-full shadow-lg
-                     transition-all duration-300 hover:scale-110 opacity-70 hover:opacity-100
-                     hidden xl:flex items-center justify-center"
           aria-label={nextCardLabel}
+          className="absolute right-28 top-1/2 transform -translate-y-1/2 z-30 text-patagonia-muted hover:text-patagonia-teal p-2 rounded-full shadow-lg hidden xl:flex transition-all duration-300 hover:scale-110 hover:translate-x-4"
         >
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
+          <IoIosArrowForward size={32} />
         </button>
 
         {plans.map((pkg, index) => (
@@ -164,33 +131,6 @@ export const ServiceCarousel = ({
           />
         ))}
       </div>
-
-      <div className="text-center">
-        <div className="mb-4 block xl:hidden">
-          <p className="text-patagonia-muted text-sm flex items-center justify-center gap-2">
-            <span className="animate-pulse">👈</span>
-            {swipeHintLabel}
-            <span className="animate-pulse">👉</span>
-          </p>
-        </div>
-        <div className="mb-4 hidden xl:block">
-          <p className="text-patagonia-muted text-xs">{keyboardHintLabel}</p>
-        </div>
-        <div className="flex justify-center gap-3 mb-6">
-          {plans.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === activeIndex
-                  ? 'bg-patagonia-turquoise scale-125'
-                  : 'bg-patagonia-muted/30 hover:bg-patagonia-muted/60'
-              }`}
-              aria-label={goToPlanLabel(index + 1)}
-            />
-          ))}
-        </div>
-      </div>
-    </>
+    </div>
   );
 };
