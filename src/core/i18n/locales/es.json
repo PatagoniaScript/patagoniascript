@@ -1,5 +1,37 @@
 {
   "footer": {
     "copyright": "© 2023 - 2026 PatagoniaScript. Todos los derechos reservados."
+  },
+  "metadata": {
+    "title": "Diseño y Desarrollo Web Profesional en Patagonia y Buenos Aires",
+    "titleTemplate": "%s | PatagoniaScript",
+    "description": "Somos un equipo apasionado por el diseño web, comprometidos a dar vida a tus ideas en el vasto mundo digital. Con sedes en la Patagonia y Buenos Aires, conectamos tu visión con el mundo.",
+    "keywords": [
+      "diseño web",
+      "desarrollo web",
+      "landing pages",
+      "e-commerce",
+      "patagonia",
+      "buenos aires"
+    ],
+    "og": {
+      "siteName": "PatagoniaScript",
+      "locale": "es_AR",
+      "title": "PatagoniaScript - Desarrollo Web Profesional",
+      "description": "Somos un equipo apasionado por el diseño web, comprometidos a dar vida a tus ideas en el vasto mundo digital.",
+      "imageAlt": "PatagoniaScript - Desarrollo Web Profesional"
+    },
+    "twitter": {
+      "title": "PatagoniaScript - Desarrollo Web Profesional",
+      "description": "Desarrollo web profesional. Landing pages, e-commerce y sitios personalizados.",
+      "imageAlt": "PatagoniaScript Logo"
+    },
+    "jsonLd": {
+      "name": "PatagoniaScript",
+      "description": "Desarrollo web profesional.",
+      "serviceTypes": ["Desarrollo Web", "Diseño Web", "E-commerce"],
+      "areaServed": ["Argentina", "Venezuela", "International"],
+      "telephone": "+54-911-2776-4823"
+    }
   }
 }

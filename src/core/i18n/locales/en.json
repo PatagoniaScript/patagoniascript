@@ -1,5 +1,37 @@
 {
   "footer": {
     "copyright": "© 2023 - 2026 PatagoniaScript. All rights reserved."
+  },
+  "metadata": {
+    "title": "Professional Web Design & Development",
+    "titleTemplate": "%s | PatagoniaScript",
+    "description": "We're a team passionate about web design, committed to bringing your ideas to life in the vast digital world.",
+    "keywords": [
+      "web design",
+      "web development",
+      "landing pages",
+      "e-commerce",
+      "patagonia",
+      "buenos aires"
+    ],
+    "og": {
+      "siteName": "PatagoniaScript",
+      "locale": "en_US",
+      "title": "PatagoniaScript - Professional Web Development",
+      "description": "We're a team passionate about web design, committed to bringing your ideas to life in the vast digital world.",
+      "imageAlt": "PatagoniaScript - Professional Web Development"
+    },
+    "twitter": {
+      "title": "PatagoniaScript - Professional Web Development",
+      "description": "Professional web development. Landing pages, e-commerce and custom websites.",
+      "imageAlt": "PatagoniaScript Logo"
+    },
+    "jsonLd": {
+      "name": "PatagoniaScript",
+      "description": "Professional web development",
+      "serviceTypes": ["Web Development", "Web Design", "E-commerce"],
+      "areaServed": ["Argentina", "Venezuela", "International"],
+      "telephone": "+54-911-2776-4823"
+    }
   }
 }
