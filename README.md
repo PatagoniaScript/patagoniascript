@@ -1,70 +1,66 @@
 <h1 align="center">PatagoniaScript</h1>
-<h3 align="center">Desarrollo web a medida para pymes y emprendedores 🚀</h3>
+<h3 align="center"> Custom web development for small businesses and entrepreneurs 🚀 </h3>
 
 ---
 
-💡 *"Donde la creatividad se une con la funcionalidad"*
+💡 _"Where creativity meets functionality"_
 
-PatagoniaScript es un estudio de desarrollo web fundado en 2023, enfocado en construir sitios, e-commerce y plataformas a medida para pymes y emprendedores — con identidad visual propia y foco en performance real, no solo en diseño.
-
----
-
-### 🧩 Qué hacemos
-
-- 🛍️ **E-commerce a medida** — tiendas online completas, desde catálogo hasta checkout
-- 📣 **Landing pages** para negocios y profesionales independientes
-- ⚙️ **Sistemas internos** — paneles de administración, edición masiva de datos, validaciones centralizadas
-- 🎉 **Plataformas de eventos** — invitaciones digitales interactivas (15 años, fiestas temáticas)
+PatagoniaScript is a web development studio founded in 2023, focused on building custom websites, e-commerce solutions, and platforms for small businesses and entrepreneurs — with a unique visual identity and a strong focus on real-world performance, not just design.
 
 ---
 
-### 🚀 Stack
+### 🧩 What We Do
+
+- 🛍️ **Custom E-commerce** — complete online stores, from product catalogs to checkout
+- 📣 **Landing Pages** — high-quality landing pages for businesses and independent professionals
+- ⚙️ **Internal Systems** — admin dashboards, bulk data management, and centralized validation systems
+- 🎉 **Event Platforms** — interactive digital invitations for quinceañeras, themed parties, and special events
+
+---
+
+### 🚀 Tech Stack
 
 ![Next.js](https://img.shields.io/badge/next.js-%23000000.svg?&style=flat-square&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?&style=flat-square&logo=react&logoColor=%2361DAFB)
 ![Node.js](https://img.shields.io/badge/node.js-%23339933.svg?&style=flat-square&logo=node.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?&style=flat-square&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?&style=flat-square&logo=tailwind-css&logoColor=white)
-![MongoDB](https://img.shields.io/badge/mongodb-%2347A248.svg?&style=flat-square&logo=mongodb&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
-![Redux](https://img.shields.io/badge/redux-%23764ABC.svg?&style=flat-square&logo=redux&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=flat-square&logo=framer&logoColor=blue)
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?&style=flat-square&logo=vercel&logoColor=white)
 
 ---
 
-### 📂 Algunos proyectos
+### 📂 Selected Projects
 
-- 🛍️ **Haize** — e-commerce full stack de indumentaria masculina
-- 🏦 **Intranet para Banco Galicia** — diseño e implementación desde cero
-- 📣 **Match Digital** — landing page para community manager
-- 🎉 **Invitaciones digitales** — plataformas para 15 años y fiestas de disfraces
-- 👗 Glob Deco, Sol Campestre, Artesanías Stitch, IndumentariaSoffy — sitios a medida para marcas y emprendimientos
-
----
-
-### 👥 Equipo
-
-Estudio fundado y liderado por **Leandro Magallanes** (Full Stack Developer), junto a **José Alfredo Zambrano Aguirre** (Full Stack Developer).
+- 🛍️ **Haize** — full-stack men's fashion e-commerce platform
+- 🏦 **Banco Galicia Intranet** — designed and implemented from scratch
+- 📣 **Match Digital** — landing page for a community manager
+- 🎉 **Digital Invitations** — interactive platforms for quinceañeras and costume parties
+- 👗 **Glob Deco, Sol Campestre, Artesanías Stitch, IndumentariaSoffy** — custom websites for brands and small businesses
 
 ---
 
-### 🌱 Trabajamos con vos si...
+### 👥 Team
 
-- 💬 Tenés un proyecto y necesitás llevarlo de la idea al producto
-- 🛠️ Buscás modernizar o migrar un sistema existente
-- 🤝 Sos una agencia de marketing y necesitás un equipo técnico de confianza
+A development studio founded and led by **Leandro Magallanes** (Full Stack Developer), alongside **Jose Zambrano** (Full Stack Developer).
 
 ---
 
-### 📬 Contacto
+### 🌱 We Work With You If...
 
-[![Sitio web](https://img.shields.io/badge/Sitio-patagoniascript.vercel.app-000000?style=flat-square&logo=vercel&logoColor=white)](https://patagoniascript.vercel.app)
+- 💬 You have an idea and need to turn it into a working product
+- 🛠️ You want to modernize or migrate an existing system
+- 🤝 You're a marketing agency looking for a reliable technical team
+
+---
+
+### 📬 Contact
+
+[![Website](https://img.shields.io/badge/Website-patagoniascript.com-000000?style=flat-square&logo=vercel&logoColor=white)](https://patagoniascript.com)
 [![Instagram](https://img.shields.io/badge/-@patagonia.script-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/patagonia.script)
 [![Email](https://img.shields.io/badge/Email-patagoniascript%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:patagoniascript@gmail.com)
 
 ---
 
 <p align="center">
-  ¿Tenés un proyecto en mente? Escribinos 🙌
+  Have a project in mind? Let's build it together 🙌
 </p>

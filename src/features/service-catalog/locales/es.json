@@ -1,0 +1,75 @@
+{
+  "Insights": {
+    "label": "Nuestros planes",
+    "titleLine1": "Elegí el plan",
+    "titleLine2": "que impulsa tu negocio",
+    "intro": "Cada plan está pensado para una etapa distinta de tu negocio.",
+    "introBold": "Elegí el que se ajusta a vos.",
+    "prevCard": "Plan anterior",
+    "nextCard": "Plan siguiente",
+    "ars": "USD",
+    "viewPlan": "Ver plan",
+    "swipeHint": "Deslizá para ver los planes",
+    "keyboardHint": "Usá las flechas del teclado para navegar",
+    "goToPlan": "Ir al plan {n}"
+  },
+  "plans": [
+    {
+      "name": "Presencia Digital",
+      "subtitle": "Ideal para emprendedores que arrancan",
+      "price": "$120",
+      "badge": null,
+      "color": "from-emerald-500 to-teal-600",
+      "popular": false,
+      "pitch": "Tu negocio en internet en menos de 2 semanas.",
+      "features": [
+        "Landing Page profesional (hasta 5 secciones)",
+        "Diseño mobile-first y responsive",
+        "Formulario de contacto funcional",
+        "Optimización de velocidad (Core Web Vitals)",
+        "Integración con WhatsApp Business",
+        "3 rondas de revisión incluidas",
+        "Entrega en Vercel o dominio propio"
+      ],
+      "cta": "Quiero mi sitio web"
+    },
+    {
+      "name": "Pyme Digital",
+      "subtitle": "Para negocios que quieren vender más",
+      "price": "$280",
+      "badge": "Más elegido",
+      "color": "from-blue-500 to-indigo-600",
+      "popular": true,
+      "pitch": "Un sistema completo para gestionar y hacer crecer tu negocio.",
+      "features": [
+        "Sitio web o tienda online completa (hasta 8 vistas)",
+        "Panel de administración a medida",
+        "Integración de base de datos y backend",
+        "Pasarela de pago (Mercado Pago)",
+        "Analytics y métricas de negocio",
+        "5 sprints de desarrollo + QA",
+        "Consultoría de estrategia digital (2 hs)"
+      ],
+      "cta": "Quiero hacer crecer mi negocio"
+    },
+    {
+      "name": "Proyecto a Medida",
+      "subtitle": "Para empresas con requerimientos específicos",
+      "price": "COTIZAR",
+      "badge": null,
+      "color": "from-violet-500 to-purple-700",
+      "popular": false,
+      "pitch": "Desarrollamos exactamente lo que tu empresa necesita.",
+      "features": [
+        "E-commerce o plataforma SAAS compleja",
+        "Integraciones con ERPs y sistemas externos",
+        "Arquitectura escalable y modular",
+        "Sistemas de usuarios y roles avanzados",
+        "Dashboard con métricas de negocio (BI)",
+        "Consultoría de arquitectura de software",
+        "Soporte técnico prioritario incluido"
+      ],
+      "cta": "Agendar una consultoría gratis"
+    }
+  ]
+}

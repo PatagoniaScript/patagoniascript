@@ -1,0 +1,60 @@
+{
+  "label": "Nuestros Trabajos",
+  "titleLine1": "Explora Nuestros Trabajos",
+  "titleLine2": "Cada proyecto es una historia única. Descubre cómo convertimos ideas en experiencias digitales extraordinarias que conectan con audiencias y impulsan resultados.",
+  "cta": "Ver Proyecto",
+  "projects": [
+    {
+      "id": "0",
+      "imgUrl": "urtxkm9dwstokbbyfyjq",
+      "title": "Haize — Men's Fashion Store",
+      "description": "E-commerce de indumentaria masculina con gestión de variantes, autenticación de usuarios y pasarela de pago en producción.",
+      "tags": [
+        "E-commerce",
+        "Next.js",
+        "MongoDB",
+        "Mercado Pago API",
+        "Zustand",
+        "Clerk",
+        "Cloudinary"
+      ],
+      "url": "https://haize.com.ar/"
+    },
+    {
+      "id": "1",
+      "imgUrl": "caghgoqsefybhmdejqrg",
+      "title": "PréstamosApp",
+      "description": "Plataforma Full-Stack para gestión de préstamos, clientes y cálculo de estadísticas financieras (TIR y Mora).",
+      "tags": ["Next.js", "Tailwind", "Finanzas", "Supabase", "Full-Stack"],
+      "url": "https://creditapp-seven.vercel.app/"
+    },
+    {
+      "id": "2",
+      "imgUrl": "so7kgehlscw8crdovuz8",
+      "title": "IndumentariaSoffy",
+      "description": "Tienda online de moda femenina con flujo de compra completo, pasarela de pago y gestión de inventario.",
+      "tags": [
+        "E-commerce",
+        "React",
+        "Estilo",
+        "Mercado Pago API",
+        "Inventario"
+      ],
+      "url": "https://indumentariasoffy.vercel.app/"
+    },
+    {
+      "id": "3",
+      "imgUrl": "gxgkgksbt97riwwx5glo",
+      "title": "Sol Campestre",
+      "description": "E-commerce B2C con gestión de stock, sincronización de pedidos y pago real integrado, orientado a productos rurales.",
+      "tags": [
+        "E-commerce",
+        "Mercado Pago API",
+        "Métricas",
+        "Producción",
+        "Performance"
+      ],
+      "url": "https://solcampestre.vercel.app"
+    }
+  ]
+}

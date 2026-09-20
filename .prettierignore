@@ -1,0 +1,8 @@
+backup/
+node_modules/
+.next/
+dist/
+build/
+coverage/
+public/temp/
+pnpm-lock.yaml

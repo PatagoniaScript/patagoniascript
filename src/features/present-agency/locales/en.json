@@ -1,0 +1,31 @@
+{
+  "Hero": {
+    "menu": [
+      { "label": "About", "link": "#about" },
+      { "label": "Services", "link": "#services" },
+      { "label": "Portfolio", "link": "#portfolio" },
+      { "label": "Contact", "link": "#contact" }
+    ],
+    "description": "High-impact digital solutions engineered for speed and scale.",
+    "cta": "Transform Your Business Today"
+  },
+  "About": {
+    "indicator": "About Us",
+    "titleLine1": "Accelerating growth for",
+    "titleLine2": "modern businesses",
+    "quoteIntro": "We understand the strategic importance of",
+    "quoteHighlight1": "optimizing every resource",
+    "quoteMiddle": "to drive measurable performance.",
+    "quoteHighlight2": "That's why we build resilient, high-converting digital products ready for market success.",
+    "descriptionIntro": "At",
+    "descriptionBrand": "PatagoniaScript",
+    "descriptionMiddle": "we partner with ambitious brands and enterprises looking to scale their digital footprint with agility and precision.",
+    "descriptionHighlight": "We support you from initial architectural concept to deployment,",
+    "descriptionEnd": "ensuring every asset delivers maximum return on investment.",
+    "stats": [
+      { "value": "+20", "label": "projects delivered" },
+      { "value": "2 wks", "label": "average delivery time" },
+      { "value": "100%", "label": "client satisfaction rate" }
+    ]
+  }
+}

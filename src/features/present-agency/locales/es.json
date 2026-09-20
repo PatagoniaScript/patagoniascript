@@ -1,0 +1,31 @@
+{
+  "Hero": {
+    "menu": [
+      { "label": "Nosotros", "link": "#about" },
+      { "label": "Servicios", "link": "#services" },
+      { "label": "Portafolio", "link": "#portfolio" },
+      { "label": "Contacto", "link": "#contact" }
+    ],
+    "description": "Desarrollo y soluciones digitales de alto impacto en tiempo récord.",
+    "cta": "Transforma tu negocio hoy"
+  },
+  "About": {
+    "indicator": "Quiénes somos",
+    "titleLine1": "Impulsamos el crecimiento",
+    "titleLine2": "de tu negocio",
+    "quoteIntro": "Entendemos la importancia de",
+    "quoteHighlight1": "optimizar cada inversión",
+    "quoteMiddle": "para obtener resultados tangibles.",
+    "quoteHighlight2": "Por eso desarrollamos productos digitales eficientes, escalables y listos para competir.",
+    "descriptionIntro": "En",
+    "descriptionBrand": "PatagoniaScript",
+    "descriptionMiddle": "diseñamos e implementamos software estratégico para marcas y empresas que buscan evolucionar digitalmente con agilidad.",
+    "descriptionHighlight": "Te acompañamos desde el concepto hasta el despliegue,",
+    "descriptionEnd": "asegurando que cada desarrollo se traduzca en valor real para tu negocio.",
+    "stats": [
+      { "value": "+20", "label": "proyectos entregados" },
+      { "value": "2 sem", "label": "tiempo promedio de entrega" },
+      { "value": "100%", "label": "satisfacción de clientes" }
+    ]
+  }
+}

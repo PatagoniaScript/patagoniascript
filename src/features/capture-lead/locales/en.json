@@ -1,0 +1,13 @@
+{
+  "title": "Power up your business",
+  "description": "Have a project in mind? Tell us about it.",
+  "form": {
+    "labels": {
+      "name": "Enter Your Name",
+      "email": "Enter Your Email",
+      "message": "Write Your Message"
+    },
+    "submit": "Send message",
+    "thanksMessage": "Thanks for reaching out!"
+  }
+}
