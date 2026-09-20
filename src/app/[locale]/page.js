@@ -3,6 +3,7 @@ import { About } from '@/features/present-agency';
 import { Portfolio } from '@/features/show-portfolio';
 import { ServiceCatalog } from '@/features/service-catalog';
 import { ContactSection } from '@/features/capture-lead/ContactSection';
+import { Footer } from '@/core/ui/Footer';
 
 const Page = async () => {
   return (
@@ -12,6 +13,7 @@ const Page = async () => {
       <Portfolio />
       <ServiceCatalog />
       <ContactSection />
+      <Footer />
     </div>
   );
 };
