@@ -9,15 +9,15 @@ export const ServiceCatalog = () => {
   const plans = t.raw('plans');
 
   return (
-    <section className="relative overflow-hidden py-20 px-4" id="explore">
+    <section className="relative overflow-hidden py-20 px-4" id="services">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent to-cyan-400" />
-            <span className="text-cyan-400 font-medium tracking-wider uppercase text-sm">
+            <div className="w-12 h-px bg-gradient-to-r from-transparent to-patagonia-teal" />
+            <span className="text-patagonia-turquoise font-medium tracking-wider uppercase text-sm">
               {t('Insights.label')}
             </span>
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-cyan-400" />
+            <div className="w-12 h-px bg-gradient-to-l from-transparent to-patagonia-teal" />
           </div>
 
           <h2 className="text-patagonia-title font-bold mb-6">
@@ -32,7 +32,7 @@ export const ServiceCatalog = () => {
 
           <p className="text-patagonia-description text-gray-300 max-w-3xl mx-auto">
             {t('Insights.intro')}
-            <span className="text-cyan-400 font-semibold">
+            <span className="text-patagonia-teal font-semibold">
               {' '}
               {t('Insights.introBold')}
             </span>
