@@ -1,5 +1,11 @@
 {
   "Hero": {
+    "menu": [
+      { "label": "Nosotros", "link": "#about" },
+      { "label": "Servicios", "link": "#services" },
+      { "label": "Portafolio", "link": "#portfolio" },
+      { "label": "Contacto", "link": "#contact" }
+    ],
     "description": "Desarrollo y soluciones digitales de alto impacto en tiempo récord.",
     "cta": "Transforma tu negocio hoy"
   },

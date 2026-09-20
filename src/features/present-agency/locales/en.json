@@ -1,5 +1,11 @@
 {
   "Hero": {
+    "menu": [
+      { "label": "About", "link": "#about" },
+      { "label": "Services", "link": "#services" },
+      { "label": "Portfolio", "link": "#portfolio" },
+      { "label": "Contact", "link": "#contact" }
+    ],
     "description": "High-impact digital solutions engineered for speed and scale.",
     "cta": "Transform Your Business Today"
   },

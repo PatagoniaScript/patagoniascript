@@ -4,16 +4,13 @@ import { SocialLinks } from '@/core/ui/SocialLinks';
 
 export const Hero = () => {
   const t = useTranslations('presentAgency.Hero');
-  const heroNavItems = [
-    { label: 'Home', href: '#' },
-    { label: 'About', href: '#' },
-    { label: 'Portfolio', href: '#' },
-    { label: 'Services', href: '#' },
-    { label: 'Contact', href: '#' },
-  ];
+  const heroNavItems = t.raw('menu');
 
   return (
-    <section className="relative isolate w-full h-screen overflow-hidden">
+    <section
+      className="relative isolate w-full h-screen overflow-hidden"
+      id="hero"
+    >
       <video
         autoPlay
         loop
@@ -33,13 +30,13 @@ export const Hero = () => {
             {heroNavItems.map((item) => (
               <li key={item.label} className="group">
                 <a
-                  href={item.href}
+                  href={item.link}
                   className="text-white hover:text-patagonia-teal font-semibold transition-all duration-300"
                 >
                   {item.label}
                 </a>
 
-                <span className="block w-0 h-0.5 mt-2 bg-patagonia-teal group-hover:w-full transition-all dura"></span>
+                <span className="block w-0 h-0.5 mt-2 bg-patagonia-teal group-hover:w-full transition-all duration-300"></span>
               </li>
             ))}
           </ul>
