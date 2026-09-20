@@ -28,7 +28,6 @@ PatagoniaScript is a web development studio founded in 2023, focused on building
 ![MongoDB](https://img.shields.io/badge/mongodb-%2347A248.svg?&style=flat-square&logo=mongodb&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![Redux](https://img.shields.io/badge/redux-%23764ABC.svg?&style=flat-square&logo=redux&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=flat-square&logo=framer&logoColor=blue)
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?&style=flat-square&logo=vercel&logoColor=white)
 
 ---
@@ -86,7 +85,6 @@ PatagoniaScript is a web development studio founded in 2023, focused on building
 ![MongoDB](https://img.shields.io/badge/mongodb-%2347A248.svg?&style=flat-square&logo=mongodb&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![Redux](https://img.shields.io/badge/redux-%23764ABC.svg?&style=flat-square&logo=redux&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=flat-square&logo=framer&logoColor=blue)
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?&style=flat-square&logo=vercel&logoColor=white)
 
 ---
