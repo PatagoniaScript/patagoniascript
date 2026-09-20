@@ -20,12 +20,16 @@ export default getRequestConfig(async ({ locale }) => {
   const serviceCatalogMessages = (
     await import(`@/features/service-catalog/locales/${resolvedLocale}.json`)
   ).default;
+  const captureLeadMessages = (
+    await import(`@/features/capture-lead/locales/${resolvedLocale}.json`)
+  ).default;
 
   const messages = {
     ...generalMessages,
     presentAgency: presentAgencyMessages,
     showPortfolio: showPortfolioMessages,
     serviceCatalog: serviceCatalogMessages,
+    captureLead: captureLeadMessages,
   };
 
   return {

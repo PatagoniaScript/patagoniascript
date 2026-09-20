@@ -1,0 +1,12 @@
+{
+  "title": "Potencia tu negocio",
+  "form": {
+    "labels": {
+      "name": "Ingrese su nombre",
+      "email": "Ingrese su correo electrónico",
+      "message": "Escriba su mensaje"
+    },
+    "submit": "Enviar mensaje",
+    "thanksMessage": "¡Gracias por contactarnos!"
+  }
+}
