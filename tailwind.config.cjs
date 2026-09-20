@@ -26,7 +26,7 @@ module.exports = {
           { lineHeight: '1.4' },
         ],
         'patagonia-description': [
-          'clamp(0.95rem, 0.5vw + 0.8rem, 1.125rem)',
+          'clamp(1.25rem, 0.5vw + 0.8rem, 1.125rem)',
           { lineHeight: '1.6' },
         ],
       },
