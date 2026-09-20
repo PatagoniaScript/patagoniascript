@@ -89,6 +89,12 @@ export const ServiceCarousel = ({
     };
   };
 
+  const handleWhatsAppRedirect = (pkg) => {
+    const apiEndpoint = `/api/contact-redirect?plan=${encodeURIComponent(pkg.name)}&price=${encodeURIComponent(pkg.price)}`;
+
+    window.open(apiEndpoint, '_blank');
+  };
+
   return (
     <div className="max-w-7xl pb-4 mx-auto relative z-10">
       <div
@@ -124,7 +130,9 @@ export const ServiceCarousel = ({
               !isDragging && index !== activeIndex && setActiveIndex(index)
             }
             onCtaClick={() =>
-              index === activeIndex ? onSelectPlan(pkg) : setActiveIndex(index)
+              index === activeIndex
+                ? handleWhatsAppRedirect(pkg)
+                : setActiveIndex(index)
             }
             arsLabel={arsLabel}
             viewPlanLabel={viewPlanLabel}

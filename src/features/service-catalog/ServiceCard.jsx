@@ -107,7 +107,13 @@ export const ServiceCard = ({
         <button
           onClick={(e) => {
             e.stopPropagation();
-            onCtaClick();
+
+            if (isActive) {
+              const apiEndpoint = `/api/contact-redirect?plan=${encodeURIComponent(pkg.name)}`;
+              window.open(apiEndpoint, '_blank');
+            } else {
+              onCtaClick();
+            }
           }}
           className={`
             w-full rounded-lg font-semibold text-white
