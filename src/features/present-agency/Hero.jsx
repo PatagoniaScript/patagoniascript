@@ -30,7 +30,7 @@ export const Hero = () => {
       <div className="absolute inset-0 z-10 bg-black/30" />
 
       <div className="h-full relative z-20 flex flex-wrap content-center justify-center px-5 sm:px-8 lg:px-12">
-        <nav className="w-full lg:p-16 py-6 sm:py-8 lg:py-12 flex items-start justify-between gap-4 absolute top-0">
+        <nav className="w-full lg:p-16 py-6 sm:py-8 lg:py-12 flex items-center justify-between gap-4 absolute top-0">
           <ul
             className={`absolute left-0 right-0 top-full mx-5 flex flex-col gap-5 overflow-hidden rounded-2xl border border-white/10 bg-patagonia-dark/90 p-5 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-500 ease-out lg:static lg:mx-0 lg:flex lg:max-w-[70%] lg:flex-row lg:gap-x-4 lg:gap-y-2 lg:overflow-visible lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-none ${
               isMenuOpen
@@ -53,7 +53,7 @@ export const Hero = () => {
             ))}
           </ul>
 
-          <div className="flex m-1 w-full items-start justify-between gap-4 lg:w-auto lg:justify-end">
+          <div className="flex m-1 px-6 w-full justify-between items-center gap-4 lg:w-auto lg:justify-end">
             <SocialLinks className="shrink-0 gap-4 sm:gap-6 lg:gap-8" />
 
             <button
@@ -93,7 +93,15 @@ export const Hero = () => {
             {t('description')}
           </p>
 
-          <button className="py-3 px-5 mt-10 sm:mt-12 text-sm sm:text-md bg-gradient-to-r from-patagonia-cyan via-patagonia-turquoise to-patagonia-teal text-white font-bold rounded-3xl hover:scale-105 transition-all duration-300">
+          <button
+            className="py-3 px-5 mt-10 sm:mt-12 text-sm sm:text-md bg-gradient-to-r from-patagonia-cyan via-patagonia-turquoise to-patagonia-teal text-white font-bold rounded-3xl hover:scale-105 transition-all duration-300"
+            onClick={(e) => {
+              e.stopPropagation();
+
+              const apiEndpoint = `/api/contact-redirect`;
+              window.open(apiEndpoint, '_blank');
+            }}
+          >
             {t('cta')}
           </button>
         </div>
