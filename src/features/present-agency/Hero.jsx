@@ -11,7 +11,10 @@ export const Hero = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <section className="relative isolate w-full min-h- h- overflow-hidden bg-[#0A1220]" id="hero">
+<section
+       className="relative isolate w-full min-h-[680px] h-[100svh] overflow-hidden bg-[#0A1220]"
+      id="hero"
+    >
       {/* DESKTOP */}
       <video autoPlay loop muted playsInline preload="auto" className="hidden md:block absolute inset-0 z-0 w-full h-full object-cover">
         <source src="/herodesktop.mp4" type="video/mp4" />
