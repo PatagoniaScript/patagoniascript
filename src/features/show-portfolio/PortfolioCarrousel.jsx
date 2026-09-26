@@ -1,127 +1,161 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { useEffect, useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { ProjectCard } from './ProjectCard';
 
 export const PortfolioCarrousel = ({ projects }) => {
+  const t = useTranslations('showPortfolio');
   const [activeIndex, setActiveIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState(null);
-  const [touchEnd, setTouchEnd] = useState(null);
-  const [isDragging, setIsDragging] = useState(false);
-
-  const minSwipeDistance = 50;
-
-  const goToNext = () => {
-    setActiveIndex((prev) => (prev + 1) % projects.length);
-  };
-
-  const goToPrevious = () => {
-    setActiveIndex((prev) => (prev - 1 + projects.length) % projects.length);
-  };
-
-  const onTouchStart = (e) => {
-    setTouchEnd(null);
-    setTouchStart(e.targetTouches[0].clientX);
-    setIsDragging(false);
-  };
-
-  const onTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-    if (touchStart && Math.abs(touchStart - e.targetTouches[0].clientX) > 10) {
-      setIsDragging(true);
-    }
-  };
-
-  const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
-
-    if (isLeftSwipe) goToNext();
-    else if (isRightSwipe) goToPrevious();
-
-    setTimeout(() => setIsDragging(false), 100);
-  };
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [scrollDistance, setScrollDistance] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [scrollPhase, setScrollPhase] = useState('before');
+  const sectionRef = useRef(null);
+  const viewportRef = useRef(null);
+  const trackRef = useRef(null);
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'ArrowLeft') goToPrevious();
-      else if (e.key === 'ArrowRight') goToNext();
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const updateViewportMode = () => setIsDesktop(mediaQuery.matches);
+    updateViewportMode();
+    mediaQuery.addEventListener('change', updateViewportMode);
+
+    return () => mediaQuery.removeEventListener('change', updateViewportMode);
   }, []);
 
-  const getCardStyle = (index) => {
-    const position = index - activeIndex;
-    if (position === 0)
-      return {
-        transform: 'translateX(0%) scale(1) rotateY(0deg)',
-        zIndex: 20,
-        opacity: 1,
-      };
-    if (position === -1)
-      return {
-        transform: 'translateX(-60%) scale(0.8) rotateY(25deg)',
-        zIndex: 10,
-        opacity: 0.7,
-      };
-    if (position === 1)
-      return {
-        transform: 'translateX(60%) scale(0.8) rotateY(-25deg)',
-        zIndex: 10,
-        opacity: 0.7,
-      };
-    return { transform: 'translateX(0%) scale(0.6)', zIndex: 1, opacity: 0 };
-  };
+  useEffect(() => {
+    const viewport = viewportRef.current;
+    const track = trackRef.current;
+    if (!viewport || !track) return undefined;
+
+    const measureTrack = () => {
+      const distance = Math.max(0, track.scrollWidth - viewport.clientWidth);
+      setScrollDistance(distance);
+    };
+
+    const resizeObserver = new ResizeObserver(measureTrack);
+    resizeObserver.observe(viewport);
+    resizeObserver.observe(track);
+    measureTrack();
+
+    return () => resizeObserver.disconnect();
+  }, [projects.length]);
+
+  useEffect(() => {
+    if (!isDesktop || !scrollDistance) return undefined;
+
+    let frameId;
+    const updateScrollProgress = () => {
+      frameId = undefined;
+      const section = sectionRef.current;
+      if (!section) return;
+
+      const progress = Math.min(
+        1,
+        Math.max(0, -section.getBoundingClientRect().top / scrollDistance),
+      );
+      const sectionTop = section.getBoundingClientRect().top;
+      const nextPhase =
+        sectionTop > 0
+          ? 'before'
+          : -sectionTop < scrollDistance
+            ? 'active'
+            : 'after';
+      setScrollProgress((currentProgress) =>
+        Math.abs(currentProgress - progress) > 0.001
+          ? progress
+          : currentProgress,
+      );
+      setScrollPhase(nextPhase);
+      setActiveIndex(
+        Math.min(
+          projects.length - 1,
+          Math.round(progress * (projects.length - 1)),
+        ),
+      );
+    };
+    const handleScroll = () => {
+      if (frameId === undefined) {
+        frameId = window.requestAnimationFrame(updateScrollProgress);
+      }
+    };
+
+    updateScrollProgress();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+      if (frameId !== undefined) window.cancelAnimationFrame(frameId);
+    };
+  }, [isDesktop, projects.length, scrollDistance]);
 
   return (
-    <section className="relative overflow-hidden">
-      <div className="max-w-7xl pb-4 mx-auto relative z-10">
-        <div
-          className="relative w-full max-w-6xl mx-auto select-none flex justify-center content-center h-[480px] sm:h-[500px] touch-pan-y"
-          style={{ perspective: '1200px' }}
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          onTouchEnd={onTouchEnd}
-        >
-          <button
-            onClick={goToPrevious}
-            className="absolute left-4 lg:left-16 top-1/2 transform -translate-y-1/2 z-30 text-patagonia-muted hover:text-patagonia-teal p-2 rounded-full shadow-lg hidden lg:flex transition-all duration-300 hover:scale-110 hover:-translate-x-4"
-          >
-            <IoIosArrowBack size={32} />
-          </button>
-          <button
-            onClick={goToNext}
-            className="absolute right-4 lg:right-16 top-1/2 transform -translate-y-1/2 z-30 text-patagonia-muted hover:text-patagonia-teal p-2 rounded-full shadow-lg hidden lg:flex transition-all duration-300 hover:scale-110 hover:translate-x-4"
-          >
-            <IoIosArrowForward size={32} />
-          </button>
-
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              isActive={index === activeIndex}
-              isDragging={isDragging}
-              onClick={() => !isDragging && setActiveIndex(index)}
-              cardStyle={getCardStyle(index)}
-            />
-          ))}
+    <section
+      ref={sectionRef}
+      className="relative lg:h-[calc(100vh+var(--portfolio-scroll-distance))]"
+      style={{ '--portfolio-scroll-distance': `${scrollDistance}px` }}
+    >
+      <div
+        className="relative z-10 mx-auto max-w-[1600px] pb-4 lg:flex lg:h-screen lg:flex-col lg:justify-center"
+        style={
+          isDesktop
+            ? {
+                position: scrollPhase === 'active' ? 'fixed' : 'absolute',
+                top: scrollPhase === 'after' ? `${scrollDistance}px` : '0px',
+                left: 0,
+                right: 0,
+                height: '100vh',
+              }
+            : undefined
+        }
+      >
+        <div className="mb-5 flex items-center justify-between px-5 sm:px-8 lg:px-16">
+          <p className="text-xs uppercase tracking-[0.25em] text-patagonia-muted">
+            01 / {String(projects.length).padStart(2, '0')}
+          </p>
+          <div className="hidden items-center gap-3 text-xs text-patagonia-muted sm:flex">
+            <span>{t('scrollHint')}</span>
+            <span className="h-px w-12 bg-patagonia-teal/60" />
+          </div>
         </div>
 
-        <div className="flex justify-center gap-3">
+        <div ref={viewportRef} className="relative overflow-hidden">
+          <div
+            ref={trackRef}
+            tabIndex={0}
+            aria-label="Portfolio projects"
+            className="portfolio-track grid grid-cols-1 gap-5 px-5 pb-5 outline-none sm:gap-6 sm:px-8 lg:flex lg:w-max lg:gap-6 lg:px-16"
+            style={{
+              transform: isDesktop
+                ? `translate3d(-${scrollDistance * scrollProgress}px, 0, 0)`
+                : undefined,
+              willChange: isDesktop ? 'transform' : undefined,
+            }}
+          >
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                isActive={index === activeIndex}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div
+          className="mt-2 hidden justify-center gap-2 lg:flex"
+          aria-hidden="true"
+        >
           {projects.map((_, index) => (
-            <button
+            <span
               key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`h-1.5 rounded-full transition-all duration-300 ${
                 index === activeIndex
-                  ? 'bg-patagonia-teal scale-125'
-                  : 'bg-gray-600 hover:bg-gray-400'
+                  ? 'w-8 bg-patagonia-teal'
+                  : 'w-2 bg-gray-600 hover:bg-gray-400'
               }`}
             />
           ))}

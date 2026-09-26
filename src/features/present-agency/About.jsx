@@ -1,5 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
+import { Reveal } from '@/core/ui/Reveal';
 
 export const About = () => {
   const t = useTranslations('presentAgency.About');
@@ -19,16 +20,17 @@ export const About = () => {
           </div>
 
           {/* Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white via-patagonia-muted to-patagonia-teal bg-clip-text text-transparent">
-              {t('titleLine1')}
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-patagonia-teal to-patagonia-petrol bg-clip-text text-transparent">
-              {t('titleLine2')}
-            </span>
-          </h2>
-
+          <Reveal>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-patagonia-muted to-patagonia-teal bg-clip-text text-transparent">
+                {t('titleLine1')}
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-patagonia-teal to-patagonia-petrol bg-clip-text text-transparent">
+                {t('titleLine2')}
+              </span>
+            </h2>
+          </Reveal>
           {/* Description */}
           <div className="space-y-6 max-w-4xl mb-12">
             <p className="text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed">
@@ -45,21 +47,23 @@ export const About = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 w-full max-w-2xl">
-            {stats.map((stat, i) => (
-              <div
-                key={i}
-                className="bg-gradient-to-br from-patagonia-darkest/50 to-patagonia-petrol/50 backdrop-blur-xl border border-slate-700/50 rounded-xl p-4 sm:p-5 text-center hover:border-patagonia-teal transition-all duration-300"
-              >
-                <p className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-patagonia-teal to-patagonia-turquoise bg-clip-text text-transparent mb-1">
-                  {stat.value}
-                </p>
-                <p className="text-gray-300 text-xs leading-snug">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
+          <Reveal delay={150}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 w-full max-w-2xl">
+              {stats.map((stat, i) => (
+                <div
+                  key={i}
+                  className="bg-gradient-to-br from-patagonia-darkest/50 to-patagonia-petrol/50 backdrop-blur-xl border border-slate-700/50 rounded-xl p-4 sm:p-5 text-center hover:border-patagonia-teal transition-all duration-300"
+                >
+                  <p className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-patagonia-teal to-patagonia-turquoise bg-clip-text text-transparent mb-1">
+                    {stat.value}
+                  </p>
+                  <p className="text-gray-300 text-xs leading-snug">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

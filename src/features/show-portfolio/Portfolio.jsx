@@ -7,7 +7,7 @@ export const Portfolio = () => {
   const projects = t.raw('projects');
 
   return (
-    <section className="py-12 sm:py-16 relative overflow-hidden" id="portfolio">
+    <section className="relative py-12 sm:py-16" id="portfolio">
       <div className="text-center mb-8 sm:mb-6 px-5 sm:px-8">
         <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6">
           <div className="w-8 sm:w-12 h-px bg-gradient-to-r from-transparent to-patagonia-teal" />

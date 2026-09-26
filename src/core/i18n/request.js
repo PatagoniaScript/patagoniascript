@@ -23,6 +23,9 @@ export default getRequestConfig(async ({ locale }) => {
   const captureLeadMessages = (
     await import(`@/features/capture-lead/locales/${resolvedLocale}.json`)
   ).default;
+  const projectCalculatorMessages = (
+    await import(`@/features/project-calculator/locales/${resolvedLocale}.json`)
+  ).default;
 
   const messages = {
     ...generalMessages,
@@ -30,6 +33,7 @@ export default getRequestConfig(async ({ locale }) => {
     showPortfolio: showPortfolioMessages,
     serviceCatalog: serviceCatalogMessages,
     captureLead: captureLeadMessages,
+    projectCalculator: projectCalculatorMessages,
   };
 
   return {

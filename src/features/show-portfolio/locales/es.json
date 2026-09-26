@@ -3,6 +3,10 @@
   "titleLine1": "Explora Nuestros Trabajos",
   "titleLine2": "Cada proyecto es una historia única. Descubre cómo convertimos ideas en experiencias digitales extraordinarias que conectan con audiencias e impulsan resultados.",
   "cta": "Ver Proyecto",
+  "scrollHint": "Deslizá para explorar",
+  "previousProject": "Proyecto anterior",
+  "nextProject": "Proyecto siguiente",
+  "goToProject": "Ir al proyecto {n}",
   "projects": [
     {
       "id": "0",

@@ -4,6 +4,7 @@ import { About } from '@/features/present-agency';
 import { Portfolio } from '@/features/show-portfolio';
 import { ServiceCatalog } from '@/features/service-catalog';
 import { ContactSection } from '@/features/capture-lead/ContactSection';
+import { ProjectCalculator } from '@/features/project-calculator';
 import { Footer } from '@/core/ui/Footer';
 
 export async function generateMetadata({ params }) {
@@ -29,6 +30,7 @@ const Page = async () => {
       <About />
       <Portfolio />
       <ServiceCatalog />
+      <ProjectCalculator />
       <ContactSection />
       <Footer />
     </div>

@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/core/i18n/routing';
+import { SmoothScrollProvider } from '@/core/providers/SmoothScrollProvider';
 
 const SITE_URL = 'https://patagoniascript.com';
 
@@ -123,9 +124,11 @@ export default async function LocaleLayout({ children, params }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          {children}
-        </NextIntlClientProvider>
+        <SmoothScrollProvider>
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            {children}
+          </NextIntlClientProvider>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

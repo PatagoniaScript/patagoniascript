@@ -2,78 +2,62 @@
 
 import { useTranslations } from 'next-intl';
 import { CldImage } from 'next-cloudinary';
+import { Parallax } from '@/core/ui/Parallax';
 
-export const ProjectCard = ({
-  project,
-  isActive,
-  onClick,
-  cardStyle,
-  isDragging = false,
-}) => {
+export const ProjectCard = ({ project, isActive }) => {
   const t = useTranslations('showPortfolio');
 
   return (
     <div
-      className="absolute bottom-8 left-1/2 cursor-pointer h-[430px] sm:h-[450px]"
-      style={{
-        ...cardStyle,
-        width: 'min(380px, calc(100vw - 2rem))',
-        marginLeft: 'max(-190px, calc((2rem - 100vw) / 2))',
-        marginTop: '-275px',
-        transformOrigin: 'center center',
-        transformStyle: 'preserve-3d',
-        transition: 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-        pointerEvents: isDragging ? 'none' : 'auto',
-      }}
-      onClick={onClick}
+      className={`group relative w-full overflow-hidden rounded-xl border bg-gradient-to-br from-patagonia-darkest/20 to-patagonia-petrol/20 p-6 shadow-2xl transition-all duration-700 lg:h-[450px] lg:w-[380px] lg:min-w-[380px] lg:snap-center ${
+        isActive
+          ? 'border-patagonia-teal/70 shadow-patagonia-teal/10'
+          : 'border-slate-700/50 lg:opacity-75 lg:hover:opacity-100'
+      }`}
     >
-      <div
-        className="
-        relative h-full bg-gradient-to-br from-patagonia-darkest/20 to-patagonia-petrol/20 backdrop-blur-xl
-        border border-slate-700/50 rounded-xl shadow-2xl overflow-hidden p-6
-        hover:border-patagonia-teal/70 transition-all duration-700 flex flex-col justify-between
-      "
-      >
-        <div className="w-full h-40 relative rounded-md overflow-hidden mb-4">
-          <CldImage
-            src={project.imgUrl}
-            alt={project.title}
-            fill
-            sizes="(max-width: 768px) 90vw, 380px"
-            className="object-cover"
-            crop="fill"
-            gravity="auto"
-            quality="auto"
-            format="auto"
-            priority={isActive}
-          />
+      <div className="relative flex h-full flex-col justify-between">
+        <div className="relative mb-4 h-40 w-full overflow-hidden rounded-md">
+          <Parallax speed={0.12} className="h-full w-full">
+            <CldImage
+              src={project.imgUrl}
+              alt={project.title}
+              fill
+              sizes="(max-width: 1024px) 90vw, 380px"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              crop="fill"
+              gravity="auto"
+              quality="auto"
+              format="auto"
+              priority={isActive}
+            />
+          </Parallax>
         </div>
 
-        <h3 className="text-xl font-bold bg-gradient-to-r from-white to-patagonia-muted bg-clip-text text-transparent mb-2">
-          {project.title}
-        </h3>
-        {/* <p className="text-sm text-patagonia-muted mb-2">
-          Temporary Description
-        </p> */}
+        <h3 className="mb-2 text-xl font-bold text-white">{project.title}</h3>
 
-        <div className="flex flex-wrap gap-1 mb-3">
+        <div className="mb-3 flex flex-wrap gap-1">
           {project.tags?.map((tag, idx) => (
             <span
               key={idx}
-              className="px-2 py-1 text-xs font-medium bg-patagonia-turquoise/10 text-patagonia-teal rounded border border-patagonia-teal/60"
+              className="rounded border border-patagonia-teal/60 bg-patagonia-turquoise/10 px-2 py-1 text-xs font-medium text-patagonia-teal"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <p className="text-sm text-gray-300 flex-1 mb-2">
+        <p className="mb-2 flex-1 text-sm text-gray-300">
           {project.description}
         </p>
-        <a href={project.url} target="_blank" rel="noopener noreferrer">
-          <button className="w-full py-2.5 px-4 bg-gradient-to-r from-patagonia-teal to-patagonia-petrol text-white font-semibold rounded-lg text-sm shadow-lg hover:shadow-patagonia-teal/40 transition-all duration-300 hover:scale-105">
-            {t('cta')}
-          </button>
+
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(event) => event.stopPropagation()}
+          className="block w-full rounded-lg bg-gradient-to-r from-patagonia-teal to-patagonia-petrol px-4 py-2.5 text-center text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-patagonia-teal/40"
+        >
+          {t('cta')}
         </a>
       </div>
     </div>
